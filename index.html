@@ -40,14 +40,13 @@
 <script src="jquery.min.js"></script>
 <script src="jquery.rwdImageMaps.min.js"></script>
 <script>
+
 $(document).ready(function(e) {
 	$('img[usemap]').rwdImageMaps();
-
-    $(document).off('click','area');
-    $(document).on('click','area',function(){
-        alert($(this).attr('alt') + ' clicked');
-    });
-
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
 });
 </script>
 
